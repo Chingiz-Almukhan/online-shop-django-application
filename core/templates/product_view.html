@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %} {{ product.name }} {% endblock %}
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="images p-3">
+                            <div class="text-center p-4"><img id="main-image" src="{{ product.image }}" width="250"  alt="img"/></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product p-4">
+                            <div class="mt-4 mb-3">
+                                <h1>{{ product.name }}</h1>
+                                <span class="text-muted ">{{ product.category.name }}</span>
+                                <div class="d-flex flex-row align-items-center">
+                                    <span class="h4">{{ product.cost }}₸</span>
+                                </div>
+                            </div>
+                            <p class="about">{{ product.description }}</p>
+                            <div class=" mt-5">
+                                <h6 class="text-muted">Добавлено: {{ product.created_at|date:'Y-m-d H:i:s'}}</h6>
+                            </div>
+                            <div class="cart mt-4 align-items-center"> <a href="{% url 'edit' product.pk %}" class="btn btn-primary text-uppercase mr-2 px-4">Редактировать</a> <a href="{% url 'delete' product.pk %}" class="btn btn-danger text-uppercase mr-2 px-4">Удалить</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

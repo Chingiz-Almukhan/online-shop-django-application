@@ -1,0 +1,100 @@
+[
+{
+  "model": "app.product",
+  "pk": 1,
+  "fields": {
+    "name": "Молоко",
+    "description": "Домик в деревне",
+    "category": 1,
+    "created_at": "2022-09-26T22:13:04.967Z",
+    "cost": "300",
+    "image": "https://oe.kz/upload/iblock/1ff/moloko-domik-v-derevne-925-ml-3-2-tetrapaket-2.jpeg"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 2,
+  "fields": {
+    "name": "Playstation 5",
+    "description": "Игровая приставка",
+    "category": 2,
+    "created_at": "2022-09-26T22:13:28.338Z",
+    "cost": "300000",
+    "image": "https://object.pscloud.io/cms/cms/Photo/img_0_68_217_1_1.jpg"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 3,
+  "fields": {
+    "name": "Куртка",
+    "description": "",
+    "category": 4,
+    "created_at": "2022-09-27T01:53:56.688Z",
+    "cost": "20000",
+    "image": "https://static.street-beat.ru/upload/iblock/fd0/fd0485a6f8849154739bece25de43d44.jpg"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 4,
+  "fields": {
+    "name": "Велосипед",
+    "description": "",
+    "category": 3,
+    "created_at": "2022-09-27T01:54:14.556Z",
+    "cost": "15000",
+    "image": "https://www.alienbike.ru/upload/iblock/3fa/ah7snaeyjzsdq3c17gqvc2tq1743cpes.jpg"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 1,
+  "fields": {
+    "name": "Продукты",
+    "description": null
+  }
+},
+{
+  "model": "app.category",
+  "pk": 2,
+  "fields": {
+    "name": "Техника",
+    "description": null
+  }
+},
+{
+  "model": "app.category",
+  "pk": 3,
+  "fields": {
+    "name": "Спорт",
+    "description": ""
+  }
+},
+{
+  "model": "app.category",
+  "pk": 4,
+  "fields": {
+    "name": "Одежда ",
+    "description": ""
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$TdWS6ZNjYywvgHJ3LTfOlD$zHOBlLtZex2XlJX4W2OSVUqei6lUZo7Eq0czhoERmaI=",
+    "last_login": "2022-09-26T22:12:19.729Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-09-26T22:12:09.064Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

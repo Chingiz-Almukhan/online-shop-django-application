@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Add {% endblock %}
+{% block content %}
+    <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center h-100">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card rounded-3">
+          <div class="card-body p-4">
+            <h4 class="text-center my-3 pb-3">Добавить категорию</h4>
+            <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" action="{% url 'category_add' %}" method="POST">
+                {% csrf_token %}
+            <label for="name"></label><input required name="name" placeholder="Введите название" type="text" id="name" class="form-control" />
+            <label for="description"></label><textarea name="description" id="description" placeholder='Введите описание' class="form-control"></textarea>
+            <button type="submit" class="btn btn-primary mt-4">Добавить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
