@@ -1,35 +1,19 @@
 {% extends 'base.html' %}
 {% block title %} Add {% endblock %}
 {% block content %}
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center h-100">
-      <div class="col col-lg-9 col-xl-7">
-        <div class="card rounded-3">
-          <div class="card-body p-4">
-            <h4 class="text-center my-3 pb-3">Добавить товар</h4>
-            <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" action="{% url 'add' %}" method="POST">
-              {% csrf_token %}
-                  <label for="name"></label><input required name="name" placeholder="Введите название товара" type="text" id="name" class="form-control" />
-                  <label for="cost"></label><input required name="cost" placeholder="Введите цену" type="number" id="cost" class="form-control" />
-                  <label for="image"></label><input required name="image" placeholder="Введите ссылку на изображение" type="text" id="name" class="form-control" />
-                  <label for="description"></label><textarea name="description" id="description" placeholder='Введите описание' class="form-control"></textarea>
-            <div class="col-3">
-                 <label>
-                    <select name='category' required class="form-control mt-4">
-                      <option value="" disabled selected hidden>Выберете категорию</option>
-                      {% for category in categories %}
-                        <option value="{{ category.id }}">{{ category.name }}</option>
-                      {% endfor %}
-                    </select>
-                  </label>
-              </div>
-              <div class="col-3">
-                <button type="submit" class="btn btn-primary mt-4">Добавить</button>
-              </div>
-            </form>
-          </div>
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center h-100">
+            <div class="col col-lg-9 col-xl-7">
+                <div class="card rounded-3">
+                    <div class="card-body p-4">
+                        <h4 class="text-center my-3 pb-3">Добавить товар</h4>
+                        <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2"
+                              action="{% url 'add' %}" method="POST">
+                            {% include 'partial/add_edit.html' with button_text='Добавить' %}
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 {% endblock %}

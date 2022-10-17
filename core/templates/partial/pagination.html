@@ -1,0 +1,23 @@
+<div class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+    <div class="col-12">
+        <tr>
+            {% if page_obj.has_previous %}
+                <td class="btn btn-secondary"><a class='text-decoration-none' href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.previous_page_number }}">Назад</a></td>
+            {% else %}
+                <td class="page-disabled text-muted">Назад</td>
+            {% endif %}
+            <td><form class="current-page" method="get">
+                <label for="page">
+                    Страница {{ page_obj.number }}
+                    из {{ page_obj.paginator.num_pages }}.
+                    {% if search %}{% endif %}
+                </label>
+            </form></td>
+            {% if page_obj.has_next %}
+                <td class="btn btn-secondary text-decoration-none"><a class='text-decoration-none' href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.next_page_number }}">Далее</a></td>
+            {% else %}
+                <td  class="page-disabled text-muted">Далее</td>
+            {% endif %}
+        </tr>
+    </div>
+</div>

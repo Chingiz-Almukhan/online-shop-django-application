@@ -1,21 +1,11 @@
-from django.shortcuts import redirect
+from django.urls import reverse_lazy
+from django.views.generic import DeleteView
 
-from app.models import Product, Category
-
-
-def delete_view(request, pk):
-    product = Product.objects.get(pk=pk)
-    product.delete()
-    return redirect('main')
+from app.models import Product
 
 
-def category_delete_view(request, pk):
-    category = Category.objects.get(pk=pk)
-    try:
-        product = Product.objects.get(category_id=pk)
-        product.category_id = ''
-        product.save()
-    except Exception:
-        pass
-    category.delete()
-    return redirect('categories')
+class Delete(DeleteView):
+    model = Product
+
+    def get_success_url(self):
+        return reverse_lazy('main')

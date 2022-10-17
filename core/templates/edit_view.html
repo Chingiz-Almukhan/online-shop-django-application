@@ -8,24 +8,7 @@
           <div class="card-body p-4">
             <h4 class="text-center my-3 pb-3">Редактировать товар</h4>
             <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" action="{% url 'edit' product.pk %}" method="POST">
-              {% csrf_token %}
-                  <label for="name"></label><input required name="name" value="{{ product.name }}" type="text" id="name" class="form-control" />
-                  <label for="cost"></label><input required name="cost" value="{{ product.cost }}" type="number" id="cost" class="form-control" />
-                  <label for="image"></label><input required name="image" value="{{ product.image }}" type="text" id="name" class="form-control" />
-                  <label for="description"></label><textarea name="description" id="description" class="form-control">{{ product.description }}</textarea>
-            <div class="col-3">
-                 <label>
-                    <select name='category' required class="form-control mt-4">
-                      <option value="" disabled selected hidden>{{product.category.name}}</option>
-                      {% for category in categories %}
-                        <option value="{{ category.id }}">{{ category.name }}</option>
-                      {% endfor %}
-                    </select>
-                  </label>
-              </div>
-              <div class="col-3">
-                <button type="submit" class="btn btn-primary mt-4">Редактировать</button>
-              </div>
+              {% include 'partial/add_edit.html' with button_text='Сохранить' %}
             </form>
           </div>
         </div>
