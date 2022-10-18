@@ -14,3 +14,27 @@ class Product(models.Model):
 
     def __str__(self):
         return f'{self.name} - {self.category}'
+
+
+class ProductInCart(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    qty = models.DecimalField(verbose_name='Количество', max_digits=15, decimal_places=0)
+
+    @property
+    def name(self):
+        return self.product.name
+
+    @property
+    def image(self):
+        return self.product.image
+
+    @property
+    def cost(self):
+        return self.product.cost
+
+    def __str__(self):
+        return f'{self.product} - {self.qty}'
+
+
+class Order(models.Model):
+    products = models.ManyToManyField

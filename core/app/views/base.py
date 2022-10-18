@@ -11,7 +11,7 @@ class IndexView(ListView):
     template_name = 'main_page.html'
     model = Product
     context_object_name = 'products'
-    paginate_by = 1
+    paginate_by = 10
     paginate_orphans = 1
 
     def get(self, request, *args, **kwargs):

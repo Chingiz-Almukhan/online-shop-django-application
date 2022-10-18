@@ -20,17 +20,21 @@
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
-                                                        href="{% url 'product' product.pk %}">Посмотреть больше</a>
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto"
+                                   href="{% url 'product' product.pk %}">Посмотреть больше</a>
+
+                                <a class="btn btn-outline-dark mt-2"
+                                   href="{% url 'add_to_cart' product.pk %}">Добавить в корзину</a>
                             </div>
                         </div>
                     </div>
                 </div>
             {% endfor %}
         </div>
-
-    </div>
-    {% if is_paginated %}
+        {% if is_paginated %}
             {% include 'partial/pagination.html' %}
         {% endif %}
+    </div>
+
 {% endblock %}

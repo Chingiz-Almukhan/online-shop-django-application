@@ -1,6 +1,7 @@
 from django import forms
+from django.shortcuts import get_object_or_404
 
-from app.models import Product
+from app.models import Product, ProductInCart
 
 
 class SearchForm(forms.Form):
@@ -20,3 +21,11 @@ class AddEditForm(forms.ModelForm):
             {'placeholder': 'Введите описание', 'type': 'text', 'class': 'form-control'})
         self.fields['cost'].widget.attrs.update({'class': 'form-control'})
         self.fields['image'].widget.attrs.update({'class': 'form-control'})
+
+
+class AddEditCartForm(forms.ModelForm):
+    class Meta:
+        model = ProductInCart
+        fields = ['qty']
+
+
