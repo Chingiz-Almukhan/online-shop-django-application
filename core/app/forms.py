@@ -1,7 +1,7 @@
 from django import forms
 from django.shortcuts import get_object_or_404
 
-from app.models import Product, ProductInCart
+from app.models import Product, ProductInCart, Order
 
 
 class SearchForm(forms.Form):
@@ -29,3 +29,15 @@ class AddEditCartForm(forms.ModelForm):
         fields = ['qty']
 
 
+class AddOrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ['name', 'address', 'phone']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['name'].widget.attrs.update(
+            {'placeholder': 'Введите имя', 'type': 'text', 'class': 'form-control'})
+        self.fields['address'].widget.attrs.update(
+            {'placeholder': 'Введите адрес', 'type': 'text', 'class': 'form-control'})
+        self.fields['phone'].widget.attrs.update({'class': 'form-control'})

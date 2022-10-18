@@ -77,17 +77,13 @@
                                             </form>
                                         {% endfor %}
                                         <hr class="my-4">
-                                        <div class="pt-5">
-                                            <h6 class="mb-0"><a href="{% url 'main' %}" class="text-body">Вернуться на
-                                                главную страницу</a></h6>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="col-lg-4 bg-grey">
                                     <div class="p-5">
                                         <h3 class="fw-bold mb-5 mt-2 pt-1">Общая сумма</h3>
                                         <hr class="my-4">
-
                                         <div class="d-flex justify-content-between mb-4">
                                             <h5 class="text">Товаров в корзине: {{ item }}</h5>
                                         </div>
@@ -96,9 +92,10 @@
                                             <h5 class="text-uppercase">Итого</h5>
                                             <h5>{{ total }} </h5>
                                         </div>
-                                        <button type="button" class="btn btn-dark btn-block btn-lg"
-                                                data-mdb-ripple-color="dark">Оформить заказ
-                                        </button>
+                                        <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2"
+                                              action="{% url 'add_order' %}" method="POST">
+                                            {% include 'partial/add_edit.html' with button_text='Оформить заказ' %}
+                                        </form>
                                     </div>
                                 </div>
                             </div>

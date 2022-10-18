@@ -1,6 +1,6 @@
 
 from django.shortcuts import get_object_or_404, redirect
-from django.views.generic import ListView, CreateView
+from django.views.generic import CreateView
 
 from app.forms import AddEditCartForm
 from app.models import ProductInCart, Product

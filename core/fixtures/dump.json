@@ -3,8 +3,8 @@
   "model": "auth.user",
   "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$390000$uXTiIzy0B9jWB8r25x15BY$XeAdc/UNhUZPFIN+OuR+I3RrbTlSC35h3Cyb9hnnsPk=",
-    "last_login": "2022-10-04T04:37:00.160Z",
+    "password": "pbkdf2_sha256$390000$ojdcK3DZtFU0AU4i87j0J1$L9p3Mq26/4QjoinT/rr2EpIhfE9BEJtDKsIZ9xOD/ok=",
+    "last_login": "2022-10-18T12:37:08.136Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -12,7 +12,7 @@
     "email": "",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2022-10-03T19:43:40.056Z",
+    "date_joined": "2022-10-18T12:34:04.665Z",
     "groups": [],
     "user_permissions": []
   }
@@ -22,7 +22,7 @@
   "pk": 1,
   "fields": {
     "name": "Playstation 5",
-    "description": "",
+    "description": null,
     "image": "https://object.pscloud.io/cms/cms/Photo/img_0_68_235_2_1.jpg",
     "category": "technique",
     "qty": "10",
@@ -34,7 +34,7 @@
   "pk": 2,
   "fields": {
     "name": "Молоко",
-    "description": "",
+    "description": null,
     "image": "https://irecommend.ru/sites/default/files/product-images/177327/molokorek.jpg",
     "category": "products",
     "qty": "12",
@@ -46,7 +46,7 @@
   "pk": 3,
   "fields": {
     "name": "Велосипед",
-    "description": "",
+    "description": null,
     "image": "https://contents.mediadecathlon.com/p1849701/k$2683e85d6811d43d2fe50afef22cb8d6/1849701.jpg?format=auto&quality=70&f=800x800",
     "category": "sport",
     "qty": "10",
@@ -58,10 +58,10 @@
   "pk": 4,
   "fields": {
     "name": "Куртка",
-    "description": "",
+    "description": null,
     "image": "https://sneakerstudio.com.ua/rus_pl_DETSKAIA-ZIMNIAIA-KURTKA-The-North-Face-Youth-1996-Retro-Nuptse-NF0A4TIMJK3-33845_2.jpg",
     "category": "clothes",
-    "qty": "5",
+    "qty": "0",
     "cost": "1200.00"
   }
 },
@@ -70,11 +70,119 @@
   "pk": 5,
   "fields": {
     "name": "Delorian",
-    "description": "",
+    "description": null,
     "image": "https://5sector.com.ua/wp-content/uploads/2018/08/3-22-600x600.jpg",
     "category": "other",
     "qty": "1",
-    "cost": "99999.99"
+    "cost": "99999.00"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 6,
+  "fields": {
+    "name": "Playstation 5(2)",
+    "description": null,
+    "image": "https://object.pscloud.io/cms/cms/Photo/img_0_68_235_2_1.jpg",
+    "category": "technique",
+    "qty": "10",
+    "cost": "3000.00"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 7,
+  "fields": {
+    "name": "Молоко(2)",
+    "description": null,
+    "image": "https://irecommend.ru/sites/default/files/product-images/177327/molokorek.jpg",
+    "category": "products",
+    "qty": "12",
+    "cost": "850.00"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 8,
+  "fields": {
+    "name": "Велосипед(2)",
+    "description": null,
+    "image": "https://contents.mediadecathlon.com/p1849701/k$2683e85d6811d43d2fe50afef22cb8d6/1849701.jpg?format=auto&quality=70&f=800x800",
+    "category": "sport",
+    "qty": "10",
+    "cost": "1000.00"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 9,
+  "fields": {
+    "name": "Куртка(2)",
+    "description": null,
+    "image": "https://sneakerstudio.com.ua/rus_pl_DETSKAIA-ZIMNIAIA-KURTKA-The-North-Face-Youth-1996-Retro-Nuptse-NF0A4TIMJK3-33845_2.jpg",
+    "category": "clothes",
+    "qty": "5",
+    "cost": "1200.00"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 10,
+  "fields": {
+    "name": "Delorian(2)",
+    "description": null,
+    "image": "https://5sector.com.ua/wp-content/uploads/2018/08/3-22-600x600.jpg",
+    "category": "other",
+    "qty": "1",
+    "cost": "99999.00"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 11,
+  "fields": {
+    "name": "Playstation 5(3)",
+    "description": null,
+    "image": "https://object.pscloud.io/cms/cms/Photo/img_0_68_235_2_1.jpg",
+    "category": "technique",
+    "qty": "10",
+    "cost": "3000.00"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 12,
+  "fields": {
+    "name": "Молоко(3)",
+    "description": null,
+    "image": "https://irecommend.ru/sites/default/files/product-images/177327/molokorek.jpg",
+    "category": "products",
+    "qty": "12",
+    "cost": "850.00"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 13,
+  "fields": {
+    "name": "Велосипед(3)",
+    "description": null,
+    "image": "https://contents.mediadecathlon.com/p1849701/k$2683e85d6811d43d2fe50afef22cb8d6/1849701.jpg?format=auto&quality=70&f=800x800",
+    "category": "sport",
+    "qty": "10",
+    "cost": "1000.00"
+  }
+},
+{
+  "model": "app.product",
+  "pk": 14,
+  "fields": {
+    "name": "Куртка(3)",
+    "description": null,
+    "image": "https://sneakerstudio.com.ua/rus_pl_DETSKAIA-ZIMNIAIA-KURTKA-The-North-Face-Youth-1996-Retro-Nuptse-NF0A4TIMJK3-33845_2.jpg",
+    "category": "clothes",
+    "qty": "5",
+    "cost": "1200.00"
   }
 }
 ]
